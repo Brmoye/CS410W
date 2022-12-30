@@ -1,0 +1,27 @@
+File processing in Perl
+
+open(FP, "stuff.txt");
+
+open(FP, "stuff.txt") || die("bye");
+
+3 file modes:
+	1. read - open(FP, "stuff.txt");
+	2. write - open(FP, ">stuff.txt");
+	3. append - open(FP, ">>stuff.txt");
+	
+Write to a file:
+	print(FP "thing\n");
+	
+Read from a file:
+	$x = <FP>;
+	chomp($x); - to remove \n from end of read line
+	
+	
+open(FP, "file.txt");
+
+@data = <FP>; - creates a list
+# $data[0] has first line of file
+	
+chomp(@data); - remove "\n" from entire list
+	
+close(FP);
